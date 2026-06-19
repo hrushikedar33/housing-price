@@ -1,0 +1,27 @@
+services:
+  # 1. Machine Learning API (FastAPI)
+  - type: web
+    name: housing-price-ml-api
+    env: docker
+    dockerContext: .
+    dockerfilePath: ml-api/Dockerfile
+    plan: free
+
+  # 2. App 1 Backend BFF (FastAPI)
+  - type: web
+    name: housing-price-app1-backend
+    env: docker
+    dockerContext: .
+    dockerfilePath: app1-backend/Dockerfile
+    plan: free
+    envVars:
+      - key: ML_API_URL
+        value: http://housing-price-ml-api:8000
+
+  # 3. Market Analysis Backend (Spring Boot Java)
+  - type: web
+    name: housing-price-market-backend
+    env: docker
+    dockerContext: .
+    dockerfilePath: market-backend/Dockerfile
+    plan: free
