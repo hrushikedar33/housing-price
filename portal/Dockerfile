@@ -4,6 +4,7 @@ COPY portal/package.json ./
 RUN npm install
 COPY portal/ .
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_STANDALONE 1
 RUN npm run build
 
 FROM node:20-alpine AS runner
