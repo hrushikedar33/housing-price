@@ -1,0 +1,50 @@
+
+services:
+  ml-api:
+    build:
+      context: .
+      dockerfile: ml-api/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+
+  app1-backend:
+    build:
+      context: .
+      dockerfile: app1-backend/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - ML_API_URL=http://ml-api:8000
+    depends_on:
+      - ml-api
+
+  market-backend:
+    build:
+      context: .
+      dockerfile: market-backend/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ML_API_URL=http://ml-api:8000
+      - DATA_FILE_PATH=/data/House Price Dataset.csv
+    depends_on:
+      - ml-api
+    volumes:
+      - ./data:/data
+
+  portal:
+    build:
+      context: .
+      dockerfile: portal/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - APP1_BACKEND_URL=http://app1-backend:8001
+      - MARKET_BACKEND_URL=http://market-backend:8080
+      - NEXT_PUBLIC_APP1_BFF_URL=http://localhost:8001
+      - NEXT_PUBLIC_MARKET_BFF_URL=http://localhost:8080
+    depends_on:
+      - app1-backend
+      - market-backend

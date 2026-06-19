@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+app:
+  data:
+    file-path: ${DATA_FILE_PATH:../data/House Price Dataset.csv}
+  ml:
+    url: ${ML_API_URL:http://localhost:8000}
+
+spring:
+  cache:
+    type: caffeine
+    cache-names: marketStats
+    caffeine:
+      spec: expireAfterWrite=60m

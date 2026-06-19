@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+ml-api/venv/
+app1-backend/venv/
+*.egg-info/
+
+# Model artifact — committed so Docker build works without retraining
+# ml-api/model.joblib  <-- intentionally kept
+
+# Java / Maven
+market-backend/target/
+*.class
+*.jar
+!market-backend/target/market-backend-0.0.1-SNAPSHOT.jar
+
+# Node / Next.js
+portal/node_modules/
+portal/.next/
+portal/.pnp.cjs
+portal/.pnp.loader.mjs
+portal/.yarn/cache/
+portal/.yarn/unplugged/
+portal/.yarn/build-state.yml
+portal/.yarn/install-state.gz
+portal/package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Docker
+*.log

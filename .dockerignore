@@ -1,0 +1,18 @@
+# Exclude portal's heavy directories from all root-context builds
+portal/node_modules
+portal/.next
+portal/.git
+portal/.yarn
+portal/.pnp.cjs
+portal/.pnp.loader.mjs
+portal/yarn.lock
+portal/package-lock.json
+
+# ML venv
+ml-api/venv
+
+# Git metadata
+.git
+
+# Logs
+**/*.log
