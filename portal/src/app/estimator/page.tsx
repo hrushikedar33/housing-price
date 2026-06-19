@@ -71,31 +71,31 @@ export default function EstimatorPage() {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Square Footage</label>
-                        <input required type="number" step="0.1" name="square_footage" value={formData.square_footage} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" step="0.1" name="square_footage" value={formData.square_footage} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Bedrooms</label>
-                        <input required type="number" name="bedrooms" value={formData.bedrooms} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" name="bedrooms" value={formData.bedrooms} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Bathrooms</label>
-                        <input required type="number" step="0.1" name="bathrooms" value={formData.bathrooms} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" step="0.1" name="bathrooms" value={formData.bathrooms} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Year Built</label>
-                        <input required type="number" name="year_built" value={formData.year_built} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" name="year_built" value={formData.year_built} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Lot Size</label>
-                        <input required type="number" step="0.1" name="lot_size" value={formData.lot_size} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" step="0.1" name="lot_size" value={formData.lot_size} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Distance to Center</label>
-                        <input required type="number" step="0.1" name="distance_to_city_center" value={formData.distance_to_city_center} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" step="0.1" name="distance_to_city_center" value={formData.distance_to_city_center} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                     <div className="col-span-2">
                         <label className="block text-sm font-medium text-gray-700">School Rating (0-10)</label>
-                        <input required type="number" step="0.1" max="10" min="0" name="school_rating" value={formData.school_rating} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
+                        <input required type="number" step="0.1" max="10" min="0" name="school_rating" value={formData.school_rating} onChange={handleChange} className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" />
                     </div>
                 </div>
                 <button disabled={loading} type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-300">
